@@ -1,81 +1,85 @@
-import React, { useState } from "react";
-import { FaWallet, FaPlus, FaUser } from "react-icons/fa";
+// BottomNav.tsx
+import React, { useState } from 'react';
+import { FaWallet, FaPlus, FaUser } from 'react-icons/fa';
+import WalletPage from '../pages/WalletPage';
+import CreateCampaignPage from '../pages/CreateCampaignPage';
+import UserProfilePage from '../pages/UserProfilePage';
 
 const navStyle: React.CSSProperties = {
-  position: "fixed",
+  position: 'fixed',
   bottom: 0,
-  width: "100%",
-  backgroundColor: "rgba(113, 61, 146, 1)",
-  display: "flex",
-  justifyContent: "space-around",
-  padding: "10px 0",
+  width: '100%',
+  backgroundColor: 'rgba(113, 61, 146, 1)',
+  display: 'flex',
+  justifyContent: 'space-around',
+  padding: '10px 0',
   zIndex: 1000,
 };
 
 const iconStyle: React.CSSProperties = {
-  color: "#fbb251",
-  fontSize: "24px",
-  cursor: "pointer",
+  color: '#fbb251',
+  fontSize: '24px',
+  cursor: 'pointer',
 };
 
-const formStyle: React.CSSProperties = {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "white",
-  padding: "20px",
-  boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
-  zIndex: 1001,
-};
+interface Pages {
+  wallet: boolean;
+  createCampaign: boolean;
+  userProfile: boolean;
+}
 
-export default function BottomNav() {
-  const [showForm, setShowForm] = useState(false);
+const BottomNav: React.FC = () => {
+  const [pages, setPages] = useState<Pages>({
+    wallet: false,
+    createCampaign: false,
+    userProfile: false,
+  });
 
-  const handleIconClick = () => {
-    setShowForm(true);
-  };
-
-  const handleCloseForm = () => {
-    setShowForm(false);
+  const handleIconClick = (pageName: string) => {
+    switch (pageName) {
+      case 'wallet':
+        setPages({
+          wallet: true,
+          createCampaign: false,
+          userProfile: false,
+        });
+        break;
+      case 'create-campaign':
+        setPages({
+          wallet: false,
+          createCampaign: true,
+          userProfile: false,
+        });
+        break;
+      case 'user-profile':
+        setPages({
+          wallet: false,
+          createCampaign: false,
+          userProfile: true,
+        });
+        break;
+    }
   };
 
   return (
     <>
       <nav style={navStyle}>
-        <div style={iconStyle}>
+        <div style={iconStyle} onClick={() => handleIconClick('wallet')}>
           <FaWallet />
         </div>
-        <div style={iconStyle} onClick={handleIconClick}>
+        <div style={iconStyle} onClick={() => handleIconClick('create-campaign')}>
           <FaPlus />
         </div>
-        <div style={iconStyle}>
+        <div style={iconStyle} onClick={() => handleIconClick('user-profile')}>
           <FaUser />
         </div>
       </nav>
-      {showForm && (
-        <div style={formStyle}>
-          <h2>Create YouTube Video View Campaign</h2>
-          <form>
-            <div>
-              <label>Video URL:</label>
-              <input type="text" />
-            </div>
-            <div>
-              <label>Budget:</label>
-              <input type="number" />
-            </div>
-            <div>
-              <label>Duration:</label>
-              <input type="text" />
-            </div>
-            <button type="button" onClick={handleCloseForm}>
-              Close
-            </button>
-            <button type="submit">Create Campaign</button>
-          </form>
-        </div>
-      )}
+
+      {pages.wallet && <WalletPage />}
+      {pages.createCampaign && <CreateCampaignPage />}
+      {pages.userProfile && <UserProfilePage />}
     </>
   );
-}
+};
+
+export default BottomNav;
