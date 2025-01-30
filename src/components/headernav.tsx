@@ -25,13 +25,13 @@ const buttonStyle: CSSProperties = {
     backgroundColor: "#fbb251",
     color: "rgba(113, 61, 146, 1)",
     border: "none",
-    padding: "8px 16px",
+    // padding: "8px 16px",
     cursor: "pointer",
     fontWeight: "bold",
     fontSize: "1em",
     borderRadius: "4px",
     boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-    marginLeft: "16px",
+    // marginLeft: "16px",
 };
 
 
@@ -39,9 +39,9 @@ export default function Header() {
   return (
     <header style={headerStyle}>
       <div style={{ fontWeight: "bold", fontSize: "1.5em", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
-        Tube 3.0
+        TUBE 3.0
       </div>
-    <button style={buttonStyle}>Click Me</button>
+    <button style={buttonStyle}>SIGN UP</button>
       {/* <div>
         {props.user === null ? (
           <button onClick={props.onSignIn} style={buttonStyle}>Sign in</button>

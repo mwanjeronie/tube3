@@ -1,18 +1,23 @@
 import React from 'react';
-// import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BottomNav from './components/bottomnav';
 import Header from './components/headernav';
+import TabsNav from './components/tabsnav';
+import Home from './pages/home';
+import Following from './feedtabs/following';
+import Explore from './feedtabs/explore';
 
 function App() {
   return (
-    <div className="app-container">
-      <Header user={null} onSignIn={() => {}} onSignOut={() => {}} />
-      <div className="content">
-        {/* <h1>Welcome to the App</h1>
-        <p>This is the main content area.</p> */}
+    
+      <div className="app-container">
+        <Header />
+        <div className="content">
+          <Home />
+        </div>
+        <BottomNav />
       </div>
-      <BottomNav />
-    </div>
+    
   );
 }
 
