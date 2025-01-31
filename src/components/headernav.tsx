@@ -1,11 +1,4 @@
 import React, { CSSProperties } from "react";
-// import { User } from "../";
-
-// interface Props {
-//   onSignIn: () => void;
-//   onSignOut: () => void;
-//   user: User | null;
-// }
 
 const headerStyle: CSSProperties = {
   padding: 8,
@@ -22,16 +15,7 @@ const headerStyle: CSSProperties = {
 };
 
 const buttonStyle: CSSProperties = {
-    backgroundColor: "#fbb251",
-    color: "rgba(113, 61, 146, 1)",
-    border: "none",
-    // padding: "8px 16px",
-    cursor: "pointer",
-    fontWeight: "bold",
-    fontSize: "1em",
-    borderRadius: "4px",
-    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-    // marginLeft: "16px",
+ 
 };
 
 
@@ -41,16 +25,8 @@ export default function Header() {
       <div style={{ fontWeight: "bold", fontSize: "1.5em", textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
         TUBE 3.0
       </div>
-    <button style={buttonStyle}>SIGN UP</button>
-      {/* <div>
-        {props.user === null ? (
-          <button onClick={props.onSignIn} style={buttonStyle}>Sign in</button>
-        ) : (
-          <div>
-            @{props.user.username} <button type="button" onClick={props.onSignOut} style={buttonStyle}>Sign out</button>
-          </div>
-        )}
-      </div> */}
+    
+     
     </header>
   );
 }

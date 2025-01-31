@@ -5,7 +5,7 @@ import Header from './components/headernav';
 import TabsNav from './components/tabsnav';
 import Home from './pages/home';
 import Following from './feedtabs/following';
-import Explore from './feedtabs/explore';
+import Explore from './pages/explore';
 
 function App() {
   return (
