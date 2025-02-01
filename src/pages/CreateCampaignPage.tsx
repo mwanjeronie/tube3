@@ -96,7 +96,26 @@ const CreateCampaignPage: React.FC = () => {
             </label>
           </div>
         </div>
-        <button type='submit' className='submit-button'>Create Campaign</button>  
+        <button
+          type='submit'
+          className='submit-button'
+          style={{
+            marginTop: '20px',
+            padding: '10px 20px',
+            fontSize: '1.2em',
+            color: 'rgba(113, 61, 146, 1)',
+            backgroundColor: '#fbb251',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            transition: 'background-color 0.3s ease',
+          }}
+          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#e0a800')}
+          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#fbb251')}
+        >
+          Create Campaign
+        </button>
       </form>   
     </div>  
 );
