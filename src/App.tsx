@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BottomNav from './components/bottomnav';
 import Header from './components/headernav';
-import TabsNav from './components/tabsnav';
+// import TabsNav from './components/tabsnav';
 import Home from './pages/home';
-import Following from './feedtabs/following';
-import Explore from './pages/explore';
+// import Following from './feedtabs/following';
+// import Explore from './pages/explore';
 
 function App() {
   return (

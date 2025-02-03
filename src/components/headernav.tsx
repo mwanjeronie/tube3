@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 
 const headerStyle: CSSProperties = {
   padding: 8,
@@ -14,9 +14,9 @@ const headerStyle: CSSProperties = {
   zIndex: 1000,
 };
 
-const buttonStyle: CSSProperties = {
+// const buttonStyle: CSSProperties = {
  
-};
+// };
 
 
 export default function Header() {

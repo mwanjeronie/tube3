@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 const Clipboard = ({ size = 24, color = "#000000" }) => (
   <svg

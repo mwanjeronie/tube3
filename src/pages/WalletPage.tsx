@@ -1,5 +1,5 @@
 // WalletPage.tsx
-import React from 'react';
+// import React from 'react';
 
 const WalletPage = () => {
   return (

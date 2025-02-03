@@ -38,15 +38,15 @@ const iconStyle: CSSProperties = {
   flexDirection: 'column',
 };
 
-const iconContainerStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
+// const iconContainerStyle: CSSProperties = {
+//   display: 'flex',
+//   flexDirection: 'column',
+//   alignItems: 'center',
+// };
 
-const iconHoverStyle: CSSProperties = {
-  color: 'yellow',
-};
+// const iconHoverStyle: CSSProperties = {
+//   color: 'yellow',
+// };
 
 const labelStyle: CSSProperties = {
   fontSize: '12px',

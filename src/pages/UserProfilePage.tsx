@@ -1,5 +1,5 @@
 // UserProfilePage.tsx
-import React from 'react';
+// import React from 'react';
 
 const UserProfilePage = () => {
   return (
