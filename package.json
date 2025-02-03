@@ -7,8 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
+  "homepage": "https://github.com/mwanjeronie/tube3",
+ 
   "dependencies": {
     "@mui/icons-material": "^6.4.1",
     "@mui/material": "^6.4.1",
