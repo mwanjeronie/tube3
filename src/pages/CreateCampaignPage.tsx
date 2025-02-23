@@ -1,9 +1,9 @@
 // CreateCampaignPage.tsx
 import React from 'react';
-import { CSSProperties } from 'react';
+// import { CSSProperties } from 'react';
 import './css/createpage.css';
 // import { TextField, Button } from '@mui/material';
-import Clipboard from './Clipboard';
+// import Clipboard from './Clipboard';
 
 
 
