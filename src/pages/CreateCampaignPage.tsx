@@ -6,13 +6,13 @@ import './css/createpage.css';
 import Clipboard from './Clipboard';
 
 const FormStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
+  // display: 'flex',
+  // flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
   padding: '30px',
   margin: '20px auto',
-  width: '100%',
+  // width: '100%',
   backgroundColor: '#ffffff',
   borderRadius: '10px',
   boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',

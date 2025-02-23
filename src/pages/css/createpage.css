@@ -21,7 +21,7 @@
     height: 100vh;
   } */
   
-  .content {
+  /* .content {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
@@ -33,4 +33,12 @@
     width: 100%;
     padding: 0;
   }
-  
+  @media (max-width: 768px) {
+    .content {
+      padding: 10px;
+    }
+
+    .bottom-nav {
+      padding: 10px;
+    }
+  } */
