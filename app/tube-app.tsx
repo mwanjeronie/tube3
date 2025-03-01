@@ -115,7 +115,7 @@ function getYouTubeVideoId(url: string) {
 }
 
 export default function TubeApp() {
-  const [showCreateForm, setShowCreateForm] = useState(false)
+  // const [showCreateForm, setShowCreateForm] = useState(false)
   const [activeTab, setActiveTab] = useState<TabName>("home")
   const [videos, setVideos] = useState<Video[]>([])
   const [formData, setFormData] = useState({
