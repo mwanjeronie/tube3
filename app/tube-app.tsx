@@ -32,7 +32,7 @@ interface UserProfile {
   transactions: Transaction[]
 }
 
-const mockVideos = {
+const mockVideos: { [key: string]: { id: string; videoId: string; title: string; views: number }[] } = {
   "Film & Animation": [
     { id: "1", videoId: "dQw4w9WgXcQ", title: "Cinematic Short Film", views: 1500000 },
     { id: "2", videoId: "dQw4w9WgXcQ", title: "3D Animation Showcase", views: 800000 },
@@ -366,7 +366,7 @@ export default function TubeApp() {
                     </div>
                     <div className="p-4">
                       <h3 className="font-semibold text-lg text-purple-700">{category}</h3>
-                      <p className="text-sm text-gray-500">{mockVideos[category].length} videos</p>
+                      <p className="text-sm text-gray-500">{mockVideos[category as keyof typeof mockVideos].length} videos</p>
                     </div>
                   </div>
                 ))}
